@@ -1,0 +1,8 @@
+- name: 'Print whoami'
+  shell: echo "Hi there, $(whoami)!"
+  args:
+    executable: /bin/bash
+  register: t
+- debug: var=t
+- debug: msg="That's all folks!"
+- debug: var=burek

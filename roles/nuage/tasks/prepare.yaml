@@ -1,0 +1,7 @@
+- name: 'Install requirements'
+  pip:
+    name: "{{ item }}"
+    state: present
+  with_items:
+  - bambou
+  - vspk

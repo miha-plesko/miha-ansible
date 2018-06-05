@@ -1,0 +1,13 @@
+- include: tasks/prepare.yaml
+
+- name: 'Create Enterprise HELLO'
+  connection: local
+  nuage_vspk:
+    auth: "{{ nuage_auth }}"
+    type: Enterprise
+    state: present
+    properties:
+      name: HELLO
+  register: enterprise1
+
+- debug: var=enterprise1
