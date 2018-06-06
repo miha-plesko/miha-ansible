@@ -1,0 +1,7 @@
+- hosts: all
+  vars:
+    nuage_install: true
+  roles:
+  - miq-nuage
+  tasks:
+  - debug: msg="Installed nuage PIP requirements"

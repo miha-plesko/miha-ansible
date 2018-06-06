@@ -1,0 +1,13 @@
+- hosts: all
+  roles:
+  - miq-nuage
+  tasks:
+  - debug: msg="Running Nuage API..."
+  - nuage_vspk:
+      auth: '{{ nuage_auth }}'
+      type: '{{ entity_type }}'
+      state: '{{ state }}'
+      properties: '{{ properties }}'
+    register: result
+  - debug: var=result
+  - debug: msg="Done running Nuage API."

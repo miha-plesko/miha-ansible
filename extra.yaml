@@ -1,0 +1,4 @@
+entity_type: Enterprise
+state: present
+properties:
+  name: MIHA-DEMO

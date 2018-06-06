@@ -5,3 +5,4 @@
   with_items:
   - bambou
   - vspk
+  when: nuage_install
