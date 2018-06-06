@@ -3,3 +3,10 @@
   roles:
   - basic
   - nuage
+  vars:
+    nuage_auth:
+      api_username: "{{ nuage_username }}"
+      api_password: "{{ nuage_password }}"
+      api_enterprise: "{{ nuage_enterprise }}"
+      api_url: "{{ nuage_url }}"
+      api_version: "{{ nuage_version }}"
