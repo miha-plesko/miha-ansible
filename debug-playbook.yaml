@@ -1,0 +1,4 @@
+- hosts: all
+  name: Debug All Variables
+  tasks:
+  - action: template src=templates/dump.j2 dest=/home/miha/git-repos/miha-ansible/printout.json
