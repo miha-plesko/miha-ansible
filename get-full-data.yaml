@@ -11,14 +11,14 @@
   - syncrou.manageiq-vmdb
 
   tasks:
-    - name: "Get nuage_username from root"
-      manageiq_automate:
-        workspace: "{{ workspace }}"
-        get_attribute:
-
-          object: "root"
-          attribute: "nuage_username"
-      register:    result
-
-    - debug: msg="attribute result dictionary {{ result }}"
-    - debug: msg="attribute result value is {{ result.value }}"
+    - debug: msg="Hello Automate"
+#    - name: "Get nuage_username from root"
+#      manageiq_automate:
+#        workspace: "{{ workspace }}"
+#        get_attribute:
+#          object: "root"
+#          attribute: "nuage_username"
+#      register: result
+#
+#    - debug: msg="attribute result dictionary {{ result }}"
+#    - debug: msg="attribute result value is {{ result.value }}"
