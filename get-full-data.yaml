@@ -17,7 +17,7 @@
 
   tasks:
     - debug: msg="Hello Automate"
-    - name: "Get nuage_username from root"
+    - name: "Get nuage_username as attribute"
       manageiq_automate:
         workspace: "{{ workspace }}"
         get_attribute:
@@ -25,4 +25,23 @@
           attribute: "nuage_username"
       register: result
     - debug: msg="attribute result dictionary {{ result }}"
-    - debug: msg="attribute result value is {{ result.value }}"
+#    - debug: msg="attribute result value is {{ result.value }}"
+
+    - name: "Get nuage_username as state_var"
+      manageiq_automate:
+        workspace: "{{ workspace }}"
+        get_state_var:
+          attribute: "nuage_username"
+      register: result
+    - debug: msg="attribute result dictionary {{ result }}"
+#    - debug: msg="attribute result value is {{ result.value }}"
+
+    - name: Grab a vmdb object
+      manageiq_automate:
+        workspace: "{{ workspace }}"
+        get_vmdb_object:
+          object: root
+          attribute: event_stream
+      register: result
+    - debug: msg="attribute result dictionary {{ result }}"
+#    - debug: msg="attribute result value is {{ result.value }}"
