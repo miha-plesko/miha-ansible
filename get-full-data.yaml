@@ -3,6 +3,12 @@
   hosts: localhost
   connection: local
   vars:
+  - manageiq_connection:
+        url: 'http://172.17.0.1:3000'
+        username: 'admin'
+        password: 'smartvm'
+        automate_workspace: 'automate_workspaces/1234'
+        manageiq_validate_certs: false
   - object: root
 
   gather_facts: False
