@@ -1,3 +1,2 @@
 ---
-- src: syncrou.manageiq-automate
-- src: syncrou.manageiq-vmdb
+- src: xlab_si.nuage_miq_automate
